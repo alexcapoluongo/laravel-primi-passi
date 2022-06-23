@@ -1,1 +1,7 @@
-<h1>Hello {{ $name }} {{ $surname }}</h1>
+<ul>
+@foreach ($menu as $item)
+<li><a href="{{ $item['viewLink'] }}"> {{ $item['name'] }} </li>
+@endforeach
+</ul>
+
+

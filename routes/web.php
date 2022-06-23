@@ -15,8 +15,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $data = [
-        'name' => 'Alex',
-        'surname' => 'Capoluongo',
-    ];
+        'menu' => [
+                [
+                    'name' =>'Home',
+                    'viewLink' => ''
+                ],
+                [
+                    'name' => 'About us',
+                    'viewLink' => 'about'
+                ],
+                [
+                    'name' => 'Contact',
+                    'viewLink' => 'contact'
+                ]
+            ]
+        ];
     return view('home', $data);
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function() {
+    return view('contact');
 });
