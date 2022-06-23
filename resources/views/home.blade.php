@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <ul>
-        @foreach ($menu as $item)
-        <li><a href="{{ $item['viewLink'] }}"> {{ $item['name'] }} </li>
-        @endforeach
-    </ul>
+    <header>
+        <ul>
+            @foreach ($menu as $item)
+            <li><a href="{{ $item['viewLink'] }}"> {{ $item['name'] }} </li>
+            @endforeach
+        </ul>
+    </header>
 </body>
 </html>
